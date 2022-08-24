@@ -62,6 +62,7 @@ def load_json_request(city_name):
 
 app = Flask(__name__)
 Cities, session = load_database()
+app.config.from_object('settings')
 
 
 @app.route('/', methods=['GET', 'POST'])
